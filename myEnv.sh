@@ -1,5 +1,7 @@
 #!/bin/bash
-##ToDO --- Create if Deb or Fedora
+##ToDO --- Create if Ubuntu or Fedora
+
+#Ubuntu
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt-cache search gnome-shell-extension | awk '{ print "apt install -y " $1 }' > installExtensions.sh
@@ -29,5 +31,13 @@ wget -c https://download.nomachine.com/download/7.0/Linux/nomachine_7.0.211_4_x8
 sudo dnf install nomachine_7.0.211_4_x86_64.rpm -y
 sudo dnf search gnome-shell-extension | awk '{ print "dnf install -y " $1 }' > installExtensions.sh
 
+
+
+
+
 #Install Kite
 bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+
+
+
+
